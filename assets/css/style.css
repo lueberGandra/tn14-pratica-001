@@ -1,66 +1,165 @@
+:root {
+    --primaria: #152ea0;
+    --bg1: rgba(154, 174, 255, 0.2);
+    --bg2: rgba(255, 215, 151, 0.2);
+    --bg3: rgba(162, 253, 182, 0.2);
+    --bg4: rgba(255, 149, 215, 0.2);
+    --padding: 24px;
+
+}
+
 /* RESET */
 * {
-    /* border: 1px solid red;
-    background-color: rgba(255,0,0,.05); */
     box-sizing: border-box;
+    font-family: 'Montserra', sans-serif;
     font-size: 16px;
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
-    
+
 }
-a{
+
+h1 {
+    color: var(--primaria);
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 24px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    color: var(--primaria);
+    margin: 24px auto 16px;
+
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+header,
+footer {
+    background-color: var(--bg1);
+}
+
+header,
+aside,
+main,
+section,
+article,
+div, 
+footer {
+    padding: var(--padding);
+}
+
+header {
+    border-bottom: 2px solid var(--primaria);
+}
+
+footer {
+    border-top: 2px solid var(--primaria);
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
     color: inherit;
     font-weight: bolder;
     text-decoration: none;
 }
-ol,ul{
-    list-style: none;
-}/*
-a:hover{
-    background-color: rgb(212, 0, 255);
-    color: white;
-}
-body {
-    background-color: rgba(255, 166, 0, 0.76);
+
+p {
+    color: #222;
+    margin: 8px auto;
+    line-height: 1.25rem;
 }
 
-main {
-    background-color: yellow;
-    padding: 50px;
-    width: 800px;
-    margin: 30px auto;
+header img {
+    animation: bordaCamaleao 4s infinite;
+    border: 1px solid var(--primaria);
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 4px var(--primaria));
+    height: 96px;
+    width: 96px;
+    transition: transform .8s cubic-bezier(.17, .67, .83, .67);
 }
-aside article{
-    background-color:yellowgreen;
-}*/
 
-.ano{
-    color:#888;
+header img:hover {
+    transform: rotateY(360deg);
+}
+
+#habilidades article {
+   background-color: var(--bg1);
+   display: inline-block;
+   min-width: 25%;
+   min-height: 172px;
+   max-height: 172px;
+   vertical-align: top;
+   border-radius: 16px 0;
+}
+
+.ano {
+    color: var(--primaria);
     display: block;
     font-style: italic;
 }
+a[href*="tel"]::before{
+    content: '\0260E';
+    margin-right: 4px;
+}
 
 [class*="-item"] {
-    background-color:rgba(181,194,248,.2);
+    background-color: var(--bg1);
     border-radius: 32px;
     margin-bottom: 16px;
-    padding:24px;
-    
+    padding: var(--padding);
+
 }
 
 [class*="-item"]:last-child {
-   background-color:rgba(248,222,181,0.2);
-    
-}
-[class*="-item"]:first-child{
-    background-color:rgba(248,181,222,0.2);
+    background-color: var(--bg2);
+
 }
 
-[class*="-item"]:first-of-type{
-    background-color: rgba(255, 149, 215,0.2);
+[class*="-item"]:nth-child(even) {
+    background-color: var(--bg3);
 }
- 
+
+[class*="-item"]:first-of-type {
+    background-color: var(--bg4);
+}
+
+@keyframes bordaCamaleao {
+    0% {
+        border: 2px solid blue;
+    }
+
+    25% {
+        border: 2px solid red;
+    }
+
+    50% {
+        border: 2px solid yellow;
+    }
+
+    75% {
+        border: 2px solid green;
+    }
+
+    100% {
+        border: 2px solid blue;
+    }
+}
 
 
 /*
